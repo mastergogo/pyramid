@@ -1,0 +1,668 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+.pyramid {
+  width: 519px;
+  display: flex;
+  flex-direction: column-reverse;
+  height: 451px;
+  -webkit-clip-path: polygon(50% 0, 100% 100%, 0 100%);
+  clip-path: polygon(50% 0, 100% 100%, 0 100%);
+  cursor: pointer;
+  background-image: url(../img/pyramid.png);
+  margin: 0 auto;
+  z-index: 2;
+  /* box-shadow: 1px 2px 3px 4px #fff; */
+  /* width: fit-content; */
+  background-repeat: no-repeat;
+  background-size: 520px 451px;
+  background-position: -3px;
+}
+
+.pyramid__section {
+  /* flex: 1 1 100%; */
+}
+.pyramid__section:nth-of-type(even) {
+}
+.pyramid__section::after {
+}
+.pyramid__section::before {
+}
+.pyramid__section:focus-visible {
+  background: #ffffff38;
+  outline: 0;
+}
+.pyramid__section:hover {
+  background: #ffffff38;
+  /* opacity: 0.3; */
+}
+
+.one {
+  position: relative;
+  /* background: yellow; */
+  width: 520px;
+  height: 80px;
+  top: 0px;
+  left: 0px;
+}
+.two {
+  position: relative;
+  /* background: yellow; */
+  width: 411px;
+  height: 82px;
+  top: -12px;
+  left: 55px;
+}
+.three {
+  position: relative;
+  /* background: yellow; */
+  width: 303px;
+  height: 80px;
+  top: -25px;
+  left: 110px;
+}
+.four {
+  position: relative;
+  /* background: yellow; */
+  width: 230px;
+  height: 82px;
+  top: -35px;
+  left: 159px;
+}
+.five {
+  /* margin-bottom: 51px; */
+  position: relative;
+  /* background: yellow; */
+  width: 322px;
+  height: 79px;
+  left: 108px;
+  top: -48px;
+}
+header {
+  background: #031f5f;
+  color: #fff;
+  font-family: sans-serif;
+  padding: 15px;
+  font-size: 25px;
+  text-align: center;
+}
+
+footer {
+  background: #031f5f;
+  color: #fff;
+  font-family: sans-serif;
+  padding: 30px;
+  font-size: 25px;
+  text-align: center;
+  position: relative;
+  /* top: -17px; */
+  z-index: 2;
+}
+.pyramidHolder {
+  padding-top: 10px;
+  z-index: 3;
+  position: relative;
+  /* box-shadow: 1px 2px 3px 4px #fff; */
+  /* box-shadow: 1px 2px 3px 4px #fff; */
+  width: fit-content;
+  margin: 0 auto;
+}
+.pyramidHolder p {
+  position: absolute;
+  color: #fff;
+  font-family: sans-serif;
+  user-select: none;
+}
+main {
+  background-color: #39b8b7;
+}
+.three .t1 {
+  position: absolute;
+  top: 16px;
+  left: 0px;
+  font-family: sans-serif;
+  color: #fff;
+  font-size: 22px;
+  width: 124px;
+  text-align: right;
+  font-weight: bold;
+}
+
+.three .t2 {
+  position: absolute;
+  top: 23px;
+  left: 177px;
+  font-family: sans-serif;
+  color: #fff;
+  font-size: 15px;
+  width: 99px;
+}
+.two .t1 {
+  position: absolute;
+  top: 16px;
+  left: 55px;
+  font-family: sans-serif;
+  color: #fff;
+  font-size: 22px;
+  width: 124px;
+  text-align: right;
+  font-weight: bold;
+}
+
+.two .t2 {
+  position: absolute;
+  top: 21px;
+  left: 235px;
+  font-family: sans-serif;
+  color: #fff;
+  font-size: 15px;
+}
+.one .t1 {
+  position: absolute;
+  top: 16px;
+  left: 108px;
+  font-family: sans-serif;
+  color: #fff;
+  font-size: 22px;
+  width: 124px;
+  text-align: right;
+  font-weight: bold;
+}
+
+.one .t2 {
+  position: absolute;
+  top: 31px;
+  left: 286px;
+  font-family: sans-serif;
+  color: #fff;
+  font-size: 15px;
+}
+.five.t1 {
+  top: 15px;
+  left: 57px;
+  font-size: 22px;
+  font-weight: bold;
+}
+.five.t2 {
+  top: 16px;
+  left: 310px;
+}
+.four.t1 {
+  top: 115px;
+  left: 360px;
+  width: 200px;
+}
+.four.t2 {
+  top: 104px;
+  left: -18px;
+  font-size: 22px;
+  font-weight: bold;
+}
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+h3 {
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+}
+.buttonDescription {
+  display: none;
+  position: absolute;
+  top: 222px;
+  right: 84px;
+  width: 255px;
+  color: #000;
+  padding: 0px 10px 0px 10px;
+  background: #fff;
+  border-radius: 10px;
+  z-index: 1;
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .four.t2 {
+    top: 104px;
+    left: -18px;
+    font-size: 22px;
+    font-weight: bold;
+  }
+  .buttonDescription {
+    display: block;
+    right: -292px;
+    top: 177px;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 1199px) and (min-width: 992px) {
+  .four.t2 {
+    top: 104px;
+    left: -18px;
+    font-size: 22px;
+    font-weight: bold;
+  }
+  .buttonDescription {
+    right: -224px;
+    width: 200px;
+    font-size: 13px;
+    top: 177px;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 991px) and (min-width: 768px) {
+  .four.t2 {
+    top: 104px;
+    left: -18px;
+    font-size: 22px;
+    font-weight: bold;
+  }
+  .buttonDescription {
+    right: -147px;
+    width: 168px;
+    font-size: 11px;
+    top: 177px;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 767px) and (min-width: 600px) {
+  .four.t2 {
+    top: 104px;
+    left: -18px;
+    font-size: 22px;
+    font-weight: bold;
+  }
+  .buttonDescription {
+    opacity: 0;
+    display: none;
+  }
+  .five.t2 {
+    width: 249px;
+  }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) and (min-width: 400px) {
+  .four.t2 {
+    top: 77px;
+    left: 26px;
+    font-size: 15px;
+    font-weight: bold;
+    width: 100px;
+    text-align: right;
+  }
+  .buttonDescription {
+    opacity: 0;
+  }
+  .five.t2 {
+    top: 11px;
+    left: 232px;
+    width: 121px;
+    font-size: 11px;
+  }
+  .four.t1 {
+    top: 84px;
+    left: 271px;
+    width: 79px;
+    font-size: 11px;
+  }
+  .pyramid {
+    width: 400px;
+    height: 346px;
+    background-size: 400px 346px;
+    background-position: -2px;
+  }
+  .buttonDescription {
+    display: none;
+  }
+
+  .one {
+    position: relative;
+    /* background: yellow; */
+    width: 399px;
+    height: 62px;
+    top: 0px;
+    left: 0px;
+  }
+  .two {
+    position: relative;
+    /* background: yellow; */
+    width: 340px;
+    height: 63px;
+    top: -9px;
+    left: 27px;
+  }
+  .three {
+    position: relative;
+    /* background: yellow; */
+    width: 253px;
+    height: 61px;
+    top: -19px;
+    left: 75px;
+  }
+  .four {
+    position: relative;
+    /* background: yellow; */
+    width: 193px;
+    height: 63px;
+    top: -27px;
+    left: 106px;
+  }
+  .five {
+    /* margin-bottom: 51px; */
+    position: relative;
+    /* background: yellow; */
+    width: 81px;
+    height: 59px;
+    left: 158px;
+    top: -37px;
+  }
+  header {
+    background: #031f5f;
+    color: #fff;
+    font-family: sans-serif;
+    padding: 15px;
+    font-size: 25px;
+    text-align: center;
+  }
+
+  footer {
+    background: #031f5f;
+    color: #fff;
+    font-family: sans-serif;
+    padding: 30px;
+    font-size: 25px;
+    text-align: center;
+    position: relative;
+    /* top: -17px; */
+    z-index: 2;
+  }
+  .pyramidHolder {
+    padding-top: 10px;
+    z-index: 3;
+    position: relative;
+    /* box-shadow: 1px 2px 3px 4px #fff; */
+    /* box-shadow: 1px 2px 3px 4px #fff; */
+    width: fit-content;
+    margin: 0 auto;
+  }
+  .pyramidHolder p {
+    position: absolute;
+    color: #fff;
+    font-family: sans-serif;
+    user-select: none;
+  }
+  main {
+    background-color: #39b8b7;
+  }
+  .three .t1 {
+    position: absolute;
+    top: 15px;
+    left: 18px;
+    font-family: sans-serif;
+    color: #fff;
+    font-size: 15px;
+    width: 83px;
+    text-align: right;
+    font-weight: bold;
+  }
+
+  .three .t2 {
+    position: absolute;
+    top: 18px;
+    left: 147px;
+    font-family: sans-serif;
+    color: #fff;
+    font-size: 11px;
+    width: 78px;
+  }
+  .two .t1 {
+    position: absolute;
+    top: 16px;
+    left: 29px;
+    font-family: sans-serif;
+    color: #fff;
+    font-size: 15px;
+    width: 124px;
+    text-align: right;
+    font-weight: bold;
+  }
+
+  .two .t2 {
+    position: absolute;
+    top: 19px;
+    left: 202px;
+    font-family: sans-serif;
+    color: #fff;
+    font-size: 11px;
+    width: 100px;
+  }
+  .one .t1 {
+    position: absolute;
+    top: 16px;
+    left: 55px;
+    font-family: sans-serif;
+    color: #fff;
+    font-size: 15px;
+    width: 124px;
+    text-align: right;
+    font-weight: bold;
+  }
+
+  .one .t2 {
+    position: absolute;
+    top: 26px;
+    left: 232px;
+    font-family: sans-serif;
+    color: #fff;
+    font-size: 12px;
+  }
+  .five.t1 {
+    top: 15px;
+    left: 80px;
+    font-size: 15px;
+    font-weight: bold;
+    width: 100px;
+  }
+  h3 {
+    font-size: 14px;
+  }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 399px) {
+  .four.t2 {
+    top: 56px;
+    left: -10px;
+    font-size: 13px;
+    font-weight: bold;
+    width: 100px;
+    text-align: right;
+  }
+  .buttonDescription {
+    opacity: 0;
+  }
+  .five.t2 {
+    top: 6px;
+    left: 183px;
+    width: 121px;
+    font-size: 11px;
+  }
+  .four.t1 {
+    top: 60px;
+    left: 210px;
+    width: 69px;
+    font-size: 10px;
+  }
+  .pyramid {
+    width: 300px;
+    height: 259px;
+    background-size: 300px 259px;
+    background-position: -2px;
+  }
+  .buttonDescription {
+    display: none;
+  }
+
+  .one {
+    position: relative;
+    /* background: yellow; */
+    width: 306px;
+    height: 62px;
+    top: 0px;
+    left: 0px;
+  }
+  .two {
+    position: relative;
+    /* background: yellow; */
+    width: 278px;
+    height: 63px;
+    top: -9px;
+    left: 27px;
+  }
+  .three {
+    position: relative;
+    /* background: yellow; */
+    width: 231px;
+    height: 61px;
+    top: -19px;
+    left: 75px;
+  }
+  .four {
+    position: relative;
+    /* background: yellow; */
+    width: 193px;
+    height: 63px;
+    top: -27px;
+    left: 106px;
+  }
+  .five {
+    /* margin-bottom: 51px; */
+    position: relative;
+    /* background: yellow; */
+    width: 81px;
+    height: 59px;
+    left: 158px;
+    top: -37px;
+  }
+  header {
+    background: #031f5f;
+    color: #fff;
+    font-family: sans-serif;
+    padding: 15px;
+    font-size: 25px;
+    text-align: center;
+  }
+
+  footer {
+    background: #031f5f;
+    color: #fff;
+    font-family: sans-serif;
+    padding: 30px;
+    font-size: 25px;
+    text-align: center;
+    position: relative;
+    /* top: -17px; */
+    z-index: 2;
+  }
+  .pyramidHolder {
+    padding-top: 10px;
+    z-index: 3;
+    position: relative;
+    /* box-shadow: 1px 2px 3px 4px #fff; */
+    /* box-shadow: 1px 2px 3px 4px #fff; */
+    width: fit-content;
+    margin: 0 auto;
+  }
+  .pyramidHolder p {
+    position: absolute;
+    color: #fff;
+    font-family: sans-serif;
+    user-select: none;
+  }
+  main {
+    background-color: #39b8b7;
+  }
+  .three .t1 {
+    position: absolute;
+    top: 31px;
+    left: -21px;
+    font-family: sans-serif;
+    color: #fff;
+    font-size: 13px;
+    width: 77px;
+    text-align: right;
+    font-weight: bold;
+  }
+
+  .three .t2 {
+    position: absolute;
+    top: 37px;
+    left: 89px;
+    font-family: sans-serif;
+    color: #fff;
+    font-size: 9px;
+    width: 64px;
+  }
+  .two .t1 {
+    position: absolute;
+    top: 23px;
+    left: -21px;
+    font-family: sans-serif;
+    color: #fff;
+    font-size: 13px;
+    width: 124px;
+    text-align: right;
+    font-weight: bold;
+  }
+
+  .two .t2 {
+    position: absolute;
+    top: 26px;
+    left: 144px;
+    font-family: sans-serif;
+    color: #fff;
+    font-size: 10px;
+    width: 72px;
+  }
+  .one .t1 {
+    position: absolute;
+    top: 16px;
+    left: 11px;
+    font-family: sans-serif;
+    color: #fff;
+    font-size: 14px;
+    width: 114px;
+    text-align: right;
+    font-weight: bold;
+  }
+
+  .one .t2 {
+    position: absolute;
+    top: 26px;
+    left: 167px;
+    font-family: sans-serif;
+    color: #fff;
+    font-size: 10px;
+  }
+  .five.t1 {
+    top: 15px;
+    left: 44px;
+    font-size: 13px;
+    font-weight: bold;
+    width: 88px;
+  }
+  h3 {
+    font-size: 11px;
+  }
+}
